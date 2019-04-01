@@ -1,0 +1,79 @@
+@font-face {
+    font-weight: 400;
+    font-family: "Alegreya";
+    font-style: normal;
+    src: url("../fonts/Alegreya-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+@font-face {
+    font-weight: 700;
+    font-family: "Alegreya";
+    font-style: normal;
+    src: url("../fonts/Alegreya-Bold.woff") format("woff");
+    font-display: swap;
+  }
+
+@font-face {
+    font-weight: 400;
+    font-family: "ProximaNova";
+    font-style: normal;
+    src: url("../fonts/ProximaNova-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+@font-face {
+    font-weight: 700;
+    font-family: "Playfair";
+    font-style: normal;
+    src: url("../fonts/PlayfairDisplay-Bold.woff") format("woff");
+    font-display: swap;
+  }
+
+
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $bgr-color;
+	color: #fff;
+}
+
+body {
+	font-size: 14px;
+	min-width: 320px;
+	position: relative;
+	line-height: 20px;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text-color;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
